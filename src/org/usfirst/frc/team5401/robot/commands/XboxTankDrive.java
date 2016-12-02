@@ -45,19 +45,22 @@ public class XboxTankDrive extends Command {
     	right = 0;
     	
     	if (precision) { 
-    		sensitivity	=	RobotMap.Drive_Sensitivity_Precise;
+    		sensitivity	= RobotMap.Drive_Sensitivity_Precise;
     	} else {
-    		sensitivity	=	RobotMap.Drive_Sensitivity_Default;
+    		sensitivity	= RobotMap.Drive_Sensitivity_Default;
     	}
     	
     	//down on controller is positive
     	if (brake){
-    		left = 0;
+    		left  = 0;
     		right = 0;
     	} else if (Math.abs(slewLeft) > THRESH || Math.abs(slewRight) > THRESH){
-    		left = slewLeft * -1;
+    		left  = slewLeft  * -1;
     		right = slewRight * -1;
     	}
+    	
+    	left  *= sensitivity;
+    	right *= sensitivity;
     	
     	Robot.drivebase.drive(left, right);
     	
