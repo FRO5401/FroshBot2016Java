@@ -17,8 +17,10 @@ public class RobotMap {
     // public static int rangefinderModule = 1;
 	
 	//Drive Motors
-	public static final int LEFT_MOTOR 	= 0;
-	public static final int RIGHT_MOTOR = 1;
+	public static final int RIGHT_MOTOR_1 = 0;
+	public static final int RIGHT_MOTOR_2 = 1;
+	public static final int LEFT_MOTOR_1  = 2;
+	public static final int LEFT_MOTOR_2  = 3;
 	
 	//Xbox Controller Values
 	public static final int XBOX_LEFT_STICK_X 	= 0;
