@@ -28,7 +28,7 @@ public class DriveBase extends Subsystem {
     }
     
     public void drive(double leftDriveDesired, double rightDriveDesired){
-    	leftDrive.set(leftDriveDesired);
+    	leftDrive.set(leftDriveDesired * -1);	//Left motor must be reversed to match right
     	rightDrive.set(rightDriveDesired);
     }
     
