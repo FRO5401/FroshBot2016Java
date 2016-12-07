@@ -36,5 +36,9 @@ public class DriveBase extends Subsystem {
     	leftDrive.set(0);
     	rightDrive.set(0);
     }
+    
+    public void reset(){
+    	stop();
+    }
 }
 

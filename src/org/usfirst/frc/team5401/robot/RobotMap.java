@@ -20,6 +20,9 @@ public class RobotMap {
 	public static final int LEFT_MOTOR 	= 0;
 	public static final int RIGHT_MOTOR = 1;
 	
+	//Joystick Values
+	public static final int XBOX_CONTROLLER = 1;
+	
 	//Xbox Controller Values
 	public static final int XBOX_LEFT_STICK_X 	= 0;
 	public static final int XBOX_LEFT_STICK_Y 	= 1;

@@ -21,7 +21,7 @@ public class OI {
     // commands the same as any other Button.
 	
 	//Set up Joysticks
-	Joystick XboxController = new Joystick(1);
+	Joystick XboxController = new Joystick(RobotMap.XBOX_CONTROLLER);
 	
 	//Create Buttons
 	Button XboxA 					= new JoystickButton(XboxController, RobotMap.XBOX_A);
