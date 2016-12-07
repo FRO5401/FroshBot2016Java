@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team5401.robot.subsystems.DriveBase;
+import org.usfirst.frc.team5401.robot.subsystems.*;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -20,6 +20,7 @@ public class Robot extends IterativeRobot {
 
 	//Unsure if these should be final
 	public static DriveBase drivebase;
+	public static Pneumatics pneumatics;
 	public static OI oi;
 
     Command autonomousCommand;
@@ -31,6 +32,7 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		drivebase = new DriveBase();
+		pneumatics = new Pneumatics();
         chooser = new SendableChooser();
         //chooser.addDefault("Default Auto", new ExampleCommand());
 //        chooser.addObject("My Auto", new MyAutoCommand());

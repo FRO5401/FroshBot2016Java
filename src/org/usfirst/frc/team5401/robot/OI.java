@@ -3,6 +3,8 @@ package org.usfirst.frc.team5401.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import org.usfirst.frc.team5401.robot.commands.Lift;
+import org.usfirst.frc.team5401.robot.commands.Lower;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -50,6 +52,13 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
+	
+	public OI(){
+		XboxX.whenPressed(new Lift ("left"));
+		XboxA.whenPressed(new Lower("left"));
+		XboxY.whenPressed(new Lift ("right"));
+		XboxB.whenPressed(new Lower("right"));
+	}
 	
 	public double readXboxLeftStickY(){
 		return XboxController.getRawAxis(RobotMap.XBOX_LEFT_STICK_Y);

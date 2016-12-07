@@ -46,4 +46,11 @@ public class RobotMap {
 	public static final double Drive_Sensitivity_Default	=	1;
 	public static final double Drive_Sensitivity_Precise	=	0.4;
 	
+	//Pnuematics
+	public static final int SOLENOID_CAN = 0;
+	public static final int LEFT_LIFT    = 0;
+	public static final int LEFT_LOWER   = 1;
+	public static final int RIGHT_LIFT   = 2;
+	public static final int RIGHT_LOWER  = 3;
+	
 }
